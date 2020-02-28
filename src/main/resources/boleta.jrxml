@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d0fc488-027b-4c19-8764-4ad979d688aa">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (7)"/>
+	<queryString language="SQL">
+		<![CDATA[select*from boletim]]>
+	</queryString>
+	<field name="id_boletim" class="java.lang.Long">
+		<property name="net.sf.jasperreports.javabean.field.property" value="id_boletim"/>
+	</field>
+	<field name="aluno" class="java.lang.String">
+		<property name="net.sf.jasperreports.javabean.field.property" value="aluno.nomeAluno"/>
+	</field>
+	<field name="materia" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="materia.nomeMateria"/>
+	</field>
+	<field name="periodo" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="periodo.primeiroTrimestre"/>
+	</field>
+	<field name="nota" class="java.lang.Long">
+		<property name="net.sf.jasperreports.javabean.field.property" value="nota"/>
+	</field>
+	<field name="notaPrimeiro" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="nota.notaPrimeiro"/>
+	</field>
+	<field name="notaSegundo" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="nota.notaSegundo"/>
+	</field>
+	<field name="notaTerceiro" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="nota.notaTerceiro"/>
+	</field>
+	<field name="mediaFinal" class="java.lang.Object">
+		<property name="net.sf.jasperreports.javabean.field.property" value="nota.mediaFinal"/>
+	</field>
+	<group name="id_boletim">
+		<groupExpression><![CDATA[$F{id_boletim}]]></groupExpression>
+	</group>
+	<group name="aluno">
+		<groupExpression><![CDATA[$F{aluno}]]></groupExpression>
+	</group>
+	<group name="materia">
+		<groupExpression><![CDATA[$F{materia}]]></groupExpression>
+	</group>
+	<group name="periodo">
+		<groupExpression><![CDATA[$F{periodo}]]></groupExpression>
+	</group>
+	<group name="nota">
+		<groupExpression><![CDATA[$F{nota}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="0" width="400" height="57" uuid="d099747b-bb8b-4a05-9299-e4e8d342ac55"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_boletim}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="280" height="42" uuid="d06771a9-9bb7-4ec3-ba0f-db99ae5f367d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aluno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="29" width="200" height="41" uuid="db320775-8ba8-48bc-9d0c-de38964c2db3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{periodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="180" height="30" uuid="01678a1f-4ac5-4ea3-bf2a-90a9e64f27d9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{materia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="30" width="150" height="30" uuid="70e26bc1-7d1b-4de7-8458-47f507da5120"/>
+				<textElement markup="none">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notaPrimeiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="30" width="170" height="30" uuid="4eea4621-4b96-442f-9b60-478c3a1b71d3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notaSegundo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="30" width="150" height="30" uuid="a200ea44-895e-4a3b-be36-1f93133c3eeb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notaTerceiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="650" y="30" width="150" height="30" uuid="072f2a42-d147-4ea0-9826-a17f7aff9e8a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mediaFinal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+</jasperReport>
